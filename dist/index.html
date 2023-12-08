@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost&family=Poppins&family=Space+Mono:ital@1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-mano bg-lightGrayishCyan">
+    <div
+      class="landing-page max-w-full flex flex-col justify-center items-center h-screen md:mx-10 mx-4"
+    >
+      <div>
+        <p
+          class="uppercase text-veryDarkCyan text-2xl font-bold text-center tracking-[.5rem]"
+        >
+          spli <br />
+          <span>tter</span>
+        </p>
+      </div>
+      <div
+        class="container bg-white max-w-3xl p-6 mt-12 flex flex-col gap-8 md:flex-row"
+      >
+        <div class="flex flex-col justify-around md:max-w-[50%]">
+          <div class="flex flex-col">
+            <label for="" class="text-Gray font-semibold">Bill</label>
+            <div class="relative">
+              <img
+                src="../images/icon-dollar.svg"
+                class="absolute top-4 left-4"
+                alt=""
+                srcset=""
+              />
+              <input
+                type="number"
+                min="1"
+                step="any"
+                class="border-transparent text-veryDarkCyan bg-Verylightgrayishcyan py-1 px-1 mt-2 cursor-pointer outline-none border-2 focus:border-Strongcyan w-full text-end placeholder-opacity-75 placeholder-font-semibold"
+                placeholder="0"
+                id="pricevalue"
+              />
+            </div>
+          </div>
+
+          <div>
+            <p class="text-Gray font-bold">Select Tip %</p>
+            <div class="grid grid-cols-3 grid-rows-2 gap-4" id="price">
+              <button
+                class="bg-veryDarkCyan text-white flex justify-center items-center rounded-lg cursor-pointer border-2 focus:bg-Strongcyan outline-none focus:text-black px-1 py-2"
+              >
+                5%
+              </button>
+              <button
+                class="bg-veryDarkCyan text-white flex justify-center items-center rounded-lg cursor-pointer border-2 focus:bg-Strongcyan outline-none focus:text-black"
+              >
+                10%
+              </button>
+              <button
+                class="bg-veryDarkCyan text-white flex justify-center items-center rounded-lg cursor-pointer border-2 focus:bg-Strongcyan outline-none focus:text-black"
+              >
+                15%
+              </button>
+              <button
+                class="bg-veryDarkCyan text-white flex justify-center items-center rounded-lg cursor-pointer border-2 focus:bg-Strongcyan outline-none focus:text-black"
+              >
+                25%
+              </button>
+              <button
+                class="bg-veryDarkCyan text-white flex justify-center items-center rounded-lg cursor-pointer border-2 focus:bg-Strongcyan outline-none focus:text-black"
+              >
+                50%
+              </button>
+              <input
+                type="number"
+                min="1"
+                step="any"
+                class="border-transparent text-Gray bg-Verylightgrayishcyan cursor-pointer outline-none border-2 focus:border-Strongcyan w-full text-center placeholder-opacity-75 placeholder-font-semibold rounded-lg"
+                placeholder="Custom"
+                id="customtip"
+                value="0"
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <label for="" class="text-Gray font-semibold"
+              >Number of people</label
+            >
+            <span id="noofpeople"></span>
+            <div class="relative">
+              <img
+                src="../images/icon-person.svg"
+                class="absolute top-4 left-4"
+                alt=""
+                srcset=""
+              />
+              <input
+                type="number"
+                min="1"
+                step="any"
+                class="border-transparent text-veryDarkCyan bg-Verylightgrayishcyan py-1 px-1 mt-2 cursor-pointer outline-none border-2 focus:border-Strongcyan w-full text-end placeholder-opacity-75 placeholder-font-semibold"
+                placeholder="0"
+                id="numberpeople"
+                value="1"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col max-w-lg md:w-[80%]">
+          <div class="bg-veryDarkCyan">
+            <div class="p-10 flex flex-col gap-10 justify-between">
+              <div class="flex justify-between">
+                <div class="tip text-white">
+                  <p class="text-sm font-semibold" id="">Tip Amount</p>
+                  <p class="text-Grayish text-xs">/ person</p>
+                </div>
+                <div
+                  class="tip-amount text-3xl text-Strongcyan font-semibold"
+                  id="tip-amount"
+                >
+                  $0.00
+                </div>
+              </div>
+              <div class="flex justify-between">
+                <div class="tip text-white">
+                  <p class="text-sm font-semibold">Total Person</p>
+                  <p class="text-Grayish text-xs">/ person</p>
+                </div>
+                <div
+                  class="text-3xl text-Strongcyan font-semibold"
+                  id="total-person-price"
+                >
+                  $0.00
+                </div>
+              </div>
+              <div class="text-center">
+                <button
+                  class="font-semibold bg-Darkgrayishcyan text-Grayish cursor-pointer uppercase p-1.5 border-none rounded-xl mt-8 tracking-widest w-full"
+                  id="reset-btn"
+                >
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
